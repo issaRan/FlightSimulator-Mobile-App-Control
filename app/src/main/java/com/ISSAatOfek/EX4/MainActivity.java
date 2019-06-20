@@ -9,9 +9,13 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
+    // The ip received.
     private EditText ipFromUser;
+    // the port received.
     private EditText portFromUser;
+    // The connect button.
     private Button clickButton;
+    // This function is called upon creation.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    // Continue to the joystick activity
     public void viewJoystick(){
         Intent intent = new Intent(getBaseContext(), JoyStickActivity.class);
         intent.putExtra("ip",ipFromUser.getText().toString());
